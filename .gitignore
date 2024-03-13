@@ -1,0 +1,13 @@
+# toolchain
+thirdparty/**
+psyq/**
+pcsx-redux/**
+gdb/**
+
+# intermediates and binaries
+out
+src/**/*.dep
+src/**/*.o
+
+!.gitkeep
+!thirdparty/mkpsxiso.exe

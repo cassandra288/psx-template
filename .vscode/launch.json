@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "gdb",
+      "request": "attach",
+      "name": "(gdb) Launch Main",
+      "target": "localhost:3333",
+      "remote": true,
+      "stopAtConnect": true,
+      "executable": "./out/main.elf",
+      "gdbpath": "${workspaceFolder}/gdb",
+      "windows": {
+        "gdbpath": "${workspaceFolder}/gdb/bin/gdb.exe"
+      },
+      "cwd": "${workspaceRoot}",
+      "autorun": [
+        "set substitute-path /project .",
+        "monitor reset shellhalt",
+        "load ./out/example.bin",
+        "tbreak main",
+        "continue"
+      ],
+      "valuesFormatting": "parseText"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
