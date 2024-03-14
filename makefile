@@ -11,6 +11,17 @@ SOURCES = $(call rwildcard,src,*.c)
 $(info $(SOURCES))
 
 all:
-	$(foreach file,$(SOURCES),ccpsx -O2 -Xo0x80010000 $(file) -o $(file:.c=.cpe);)
+	mkdir -p out
+	ccpsx -O2 -Xo0x80010000 $(SOURCES) -o out/main.cpe
+	cpe2x out/main.cpe
+	mkpsxiso -y meta/mkpsxiso.xml
+	# $(foreach file,$(SOURCES),\
+	# 	mkdir -p out/artifacts/$(dir $(subst src/,,$(file)));\
+	# 	ccpsx -O2 -Xo0x80010000 $(file) -o $(subst src/,out/artifacts/,$(file:.c=.o)) -c;\
+	# )
+	
 
-.PHONY: all
+clean:
+	rm -rf out
+
+.PHONY: clean all
