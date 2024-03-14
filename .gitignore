@@ -1,5 +1,4 @@
 # toolchain
-thirdparty/**
 psyq/**
 pcsx-redux/**
 gdb/**
@@ -10,4 +9,3 @@ src/**/*.dep
 src/**/*.o
 
 !.gitkeep
-!thirdparty/mkpsxiso.exe
