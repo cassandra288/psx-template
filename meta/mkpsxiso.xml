@@ -9,7 +9,7 @@
 <!-- The following element defines an ISO project -->
 <!-- Attribute names should be pretty self-explanatory -->
 <!-- Cue sheet is not required if CD audio tracks are not defined -->
-<iso_project image_name="out/example.bin">
+<iso_project image_name="out/main.bin">
 	
 	<!-- This track element defines a track on the CD image, -->
 	<!-- whether it is a data track or an audio track. -->
@@ -23,8 +23,8 @@
 		<identifiers
 			system			="PLAYSTATION"
 			application		="PLAYSTATION"
-			volume			="EXAMPLE"
-			volume_set		="EXAMPLE"
+			volume			="MAIN"
+			volume_set		="MAIN"
 			publisher		="ME"
 			copyright		="COPYLEFT"
 		/>
@@ -53,7 +53,7 @@
 			
 			<!-- For this element, the source attribute can be omitted -->
 			<!-- provided the name attribute is defined. -->
-			<file name="example.exe" type="data" source="out/main.ps-exe"/>
+			<file name="main.exe" type="data" source="../out/main.ps-exe"/>
 			
 			<!-- Lastly, some dummy sectors must always be placed at the -->
 			<!-- end of the disc image. It must be a pretty large one to -->

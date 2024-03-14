@@ -1,9 +1,9 @@
 all:
 	$(MAKE) -C src
-	./thirdparty/mkpsxiso.exe -y mkpsxiso.xml
+	./thirdparty/mkpsxiso.exe -y meta/mkpsxiso.xml
 
 run:
-	cd pcsx-redux && ./pcsx-redux.exe -run -stdout -fastboot -iso ../out/example.bin
+	cd pcsx-redux && ./pcsx-redux.exe -run -stdout -fastboot -iso ../out/main.bin
 
 clean:
 	$(MAKE) -C src clean

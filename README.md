@@ -45,7 +45,7 @@ Compilation is as simple as running `make`.
 
 ## Running
 You can run `make run` to automatically load pcsx-redux (assuming you have pcsx-redux in the `pcsx-redux` directory). For running in another emulator, load the file `out/example.bin` as a disc image.
-# TODO: Instructions on burning a physical disc for the PS1
+- TODO: Instructions on burning a physical disc for the PS1
 
 ## Debugging
 1. Start pcsx-redux.

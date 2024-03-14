@@ -17,7 +17,7 @@
       "autorun": [
         "set substitute-path /project .",
         "monitor reset shellhalt",
-        "load ./out/example.bin",
+        "load ./out/main.elf",
         "tbreak main",
         "continue"
       ],
